@@ -1,0 +1,42 @@
+$dark: #212121;
+$light: #efefef;
+
+@mixin btn($menu-width,$menu-heigth){
+  // box-model
+  width: $menu-width;
+  height: $menu-heigth;
+
+  // positioning
+  // position: absolute;
+  position: relative;
+
+  // animation
+  transition-duration: 500ms;
+}
+
+@mixin main-icon($icon-width,$icon-height) {
+  background-color: $dark;
+  width: $icon-width;
+  height: $icon-height;
+
+  position: absolute;
+  display: block;
+
+  transition-duration: 0.5s;
+}
+
+@mixin icon-before-and-after($icon-width,$icon-height){
+  // box-model
+  background-color: $dark;
+  width: $icon-width;
+  height: $icon-height;
+
+  display: block;
+
+  // positioning
+  position: absolute;
+  content: "";
+
+  // animation
+  transition-duration: 0.5s;
+}

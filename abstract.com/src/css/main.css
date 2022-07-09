@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cinzel&family=EB+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/*
+@use "reset";
+@include reset.reset-default-values();
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-size: 1rem;
+  letter-spacing: 1.6px;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header-section {
+  background-color: #dadbf1;
+}
+
+header {
+  color: white;
+  background-color: black;
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  position: relative;
+  z-index: 1;
+}
+header .top-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-bottom: 6rem;
+}
+header .top-nav .logo {
+  margin-left: 6rem;
+  width: 10rem;
+  height: 3rem;
+}
+header .top-nav .sign-in {
+  font-size: 1.5rem;
+  background-color: inherit;
+  font-weight: 700;
+  margin-right: 6rem;
+  color: #818eff;
+}
+header .hero-wrap {
+  padding-bottom: 8rem;
+  display: grid;
+  grid-template-areas: "product-desc-A product-img-A";
+}
+header .hero-wrap .product-desc {
+  grid-area: product-desc-A;
+  margin-left: 3rem;
+  position: relative;
+}
+header .hero-wrap .product-desc .top-wrap {
+  font-size: 1.5rem;
+}
+header .hero-wrap .product-desc .top-wrap .title {
+  font-size: 7rem;
+  margin-bottom: 3rem;
+}
+header .hero-wrap .product-desc .top-wrap .title span:first-child {
+  font-family: "Cinzel", serif;
+}
+header .hero-wrap .product-desc .top-wrap .title span:last-child {
+  font-family: "EB Garamond", serif;
+}
+header .hero-wrap .product-desc .top-wrap button.start-trial {
+  background-color: #4c5fd5;
+  border-radius: 5px;
+  padding: 1rem;
+  color: white;
+  margin-right: 0.5rem;
+}
+header .hero-wrap .product-desc .top-wrap button.download {
+  background-color: inherit;
+  border: 1px white solid;
+  border-radius: 5px;
+  padding: 1rem;
+  color: white;
+}
+header .hero-wrap .product-desc .arrow-wrap {
+  position: absolute;
+  right: 0;
+  top: 280px;
+}
+header .hero-wrap .product-desc .arrow-wrap .arrow-gif {
+  width: 7rem;
+}
+header .hero-wrap .product-desc .arrow-wrap figcaption {
+  font-family: "Caveat", cursive;
+}
+header .hero-wrap .product-desc .companies {
+  margin-top: 5rem;
+}
+header .hero-wrap .product-desc .companies .title {
+  margin-bottom: 2rem;
+}
+header .hero-wrap .product-desc .companies .logo-gallaries {
+  display: flex;
+  column-gap: 1rem;
+}
+header .hero-wrap .product-desc .companies .logo-gallaries img {
+  width: 15%;
+}
+header .hero-wrap .product-img {
+  grid-area: product-img-A;
+}
+header .hero-wrap .product-img img {
+  width: 200%;
+}
+
+.benefits-heading-section {
+  margin: 20rem 3rem;
+  margin-bottom: 0;
+  position: sticky;
+  bottom: 0;
+}
+.benefits-heading-section h1 {
+  font-size: 5rem;
+  text-decoration: underline 0.25rem #b3b8ee;
+}
+
+.content1 {
+  background-color: #fff;
+}
+.content1 .benefits-desc-section {
+  background-color: #dadbf1;
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  padding: 3rem;
+  padding-bottom: 12rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  column-gap: 1rem;
+}
+.content1 .benefits-desc-section .product-benefits {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.content1 .benefits-desc-section .product-benefits img {
+  width: 4rem;
+  height: 4rem;
+}
+.content1 .benefits-desc-section .product-benefits h1 {
+  font-weight: 600;
+}
+.content1 .benefits-desc-section .product-benefits p {
+  font-size: 1.25rem;
+  letter-spacing: 1.3px;
+  line-height: 1.3;
+}
+.content1 .why-title {
+  margin-top: 20rem;
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+}
+
+.content2 {
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+}
+.content2 .title-wrap {
+  margin-bottom: 6rem;
+}
+.content2 .testimonies-wrap {
+  margin: 0 2rem;
+  display: flex;
+  column-gap: 1rem;
+}
+.content2 .testimonies-wrap .affiliate-link-box {
+  cursor: pointer;
+  display: grid;
+  grid-template-areas: "logo-A logo-A" "role-A role-desc-A" "link-company-A link-company-A";
+}
+.content2 .testimonies-wrap .affiliate-link-box > * {
+  border: 1.5px solid black;
+}
+.content2 .testimonies-wrap .affiliate-link-box:first-child .logo-wrap {
+  background-color: #e3dbd5;
+}
+.content2 .testimonies-wrap .affiliate-link-box:nth-child(2) .logo-wrap {
+  background-color: #c9d5d3;
+}
+.content2 .testimonies-wrap .affiliate-link-box:last-child .logo-wrap {
+  background-color: #dadbf1;
+}
+.content2 .testimonies-wrap .affiliate-link-box:hover {
+  box-shadow: 6px 6px 2px black;
+  transform: translate(-5px, -5px);
+  transition: transform 100ms;
+}
+.content2 .testimonies-wrap .affiliate-link-box .logo-wrap {
+  grid-area: logo-A;
+  padding: 4rem;
+  height: 14rem;
+}
+.content2 .testimonies-wrap .affiliate-link-box img {
+  width: 100%;
+  height: 100%;
+}
+.content2 .testimonies-wrap .affiliate-link-box .role {
+  font-size: 1.5rem;
+  font-weight: 600;
+  grid-area: role-A;
+}
+.content2 .testimonies-wrap .affiliate-link-box .role-desc {
+  grid-area: role-desc-A;
+}
+.content2 .testimonies-wrap .affiliate-link-box .role,
+.content2 .testimonies-wrap .affiliate-link-box .role-desc {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content2 .testimonies-wrap .affiliate-link-box a {
+  padding: 1.5rem;
+  grid-area: link-company-A;
+}
+.content2 .testimonies-wrap .affiliate-link-box:hover {
+  box-shadow: 6px 6px 2px black;
+  transform: translate(-5px, -5px);
+  transition: transform 100ms;
+}
+
+.content3 {
+  background-color: #f6f7f7;
+  padding: 6rem 0;
+}
+.content3 .title-wrap {
+  text-align: center;
+}
+.content3 .title-wrap h1 {
+  font-size: 4rem;
+}
+.content3 .title-wrap p {
+  margin: 4rem 0;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+.content3 .temp {
+  margin: 0 2rem;
+  display: flex;
+  column-gap: 1rem;
+}
+.content3 .temp .affiliate-link-box {
+  cursor: pointer;
+  display: grid;
+  grid-template-areas: "logo-A logo-A" "role-A role-desc-A" "link-company-A link-company-A";
+}
+.content3 .temp .affiliate-link-box > * {
+  border: 1.5px solid black;
+}
+.content3 .temp .affiliate-link-box:first-child .logo-wrap {
+  background-color: #e3dbd5;
+}
+.content3 .temp .affiliate-link-box:nth-child(2) .logo-wrap {
+  background-color: #c9d5d3;
+}
+.content3 .temp .affiliate-link-box:last-child .logo-wrap {
+  background-color: #dadbf1;
+}
+.content3 .temp .affiliate-link-box:hover {
+  box-shadow: 6px 6px 2px black;
+  transform: translate(-5px, -5px);
+  transition: transform 100ms;
+}
+.content3 .temp .affiliate-link-box .logo-wrap {
+  grid-area: logo-A;
+  padding: 4rem;
+  height: 14rem;
+}
+.content3 .temp .affiliate-link-box img {
+  width: 100%;
+  height: 100%;
+}
+.content3 .temp .affiliate-link-box .role {
+  font-size: 1.5rem;
+  font-weight: 600;
+  grid-area: role-A;
+}
+.content3 .temp .affiliate-link-box .role-desc {
+  grid-area: role-desc-A;
+}
+.content3 .temp .affiliate-link-box .role,
+.content3 .temp .affiliate-link-box .role-desc {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content3 .temp .affiliate-link-box a {
+  padding: 1.5rem;
+  grid-area: link-company-A;
+}
+.content3 .temp .affiliate-link-box:hover {
+  box-shadow: 6px 6px 2px black;
+  transform: translate(-5px, -5px);
+  transition: transform 1s;
+}
+
+/*
+arrow
+Abstracthandwriting2, sans-serif
+
+Family
+"Gt super text", sans-serif;
+*/
+
+/*# sourceMappingURL=main.css.map */
