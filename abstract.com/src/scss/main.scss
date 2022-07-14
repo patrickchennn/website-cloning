@@ -101,7 +101,7 @@ $light-purple: #dadbf1;
 
 // a little bit specific
 html,body{
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .header-section{
@@ -221,7 +221,6 @@ header{
 
     .product-img{
       grid-area: product-img-A;
-      // display: flex;
       img{
         width: 200%;
       }
@@ -391,14 +390,14 @@ footer{
     }
   }
 }
-/*
-arrow
-Abstracthandwriting2, sans-serif
 
-Family
-"Gt super text", sans-serif;
-*/
 
 
 // responsive~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // if width <=991px --> mobile mode
+
+@media screen and(max-width: 991px){
+  .product-img{
+    display: none;
+  }
+}
